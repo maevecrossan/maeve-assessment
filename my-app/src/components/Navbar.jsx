@@ -30,12 +30,12 @@ export default function Navbar() {
                 {user ? (
                     <button
                         onClick={handleLogout}
-                        className="px-3 py-2 rounded bg-red-200 text-red-700"
+                        className="px-3 py-2 rounded bg-red-200 hover:bg-red-300 text-red-700 hover:text-red-800 cursor-pointer"
                     >
                         Logout
                     </button>
                 ) : (
-                    <Link href="/login" className="block px-3 py-2 rounded bg-green-200 text-green-700">
+                    <Link href="/login" className="block px-3 py-2 rounded bg-green-200 hover:bg-green-300 text-green-700 hover:text-green-800 cursor-pointer">
                         Login
                     </Link>
                 )}
