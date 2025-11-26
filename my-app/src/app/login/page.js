@@ -47,44 +47,47 @@ export default function LoginPage() {
     };
 
     return (
-        <div className="max-w-3xl mx-auto mt-32 text-center">
-            <div className="p-8 border rounded mt-16 shadow-lg inline-block text-left bg-white">
+        <div className="mx-auto mt-32 text-center">
+            <div className="p-8 border rounded-lg mt-16 shadow-lg inline-block text-left bg-gray-800 text-white">
 
                 <h2 className="text-3xl font-extrabold mb-8 text-center">{mode === "login" ? "Login" : "Sign Up"}</h2>
 
                 <form onSubmit={handleSubmit}>
                     {mode === "signup" && (
                         <div>
-                            <label className="font-bold">Full Name</label>
+                            <label htmlFor="fullName" className="font-bold w-full">Full Name</label>
                             <input
                                 required
+                                id="fullName"
                                 type="text"
                                 value={fullName}
                                 onChange={(e) => setFullName(e.target.value)}
-                                className="border ml-3 p-1 rounded mb-4"
+                                className="w-full border p-2 rounded mt-2 mb-4 bg-gray-700 text-white"
                             />
                         </div>
                     )}
 
                     <div>
-                        <label className="font-bold">Email</label>
+                        <label htmlFor="email" className="font-bold w-full">Email</label>
                         <input
                             required
+                            id="email"
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="border ml-3 p-1 rounded mb-4"
+                            className="w-full border p-2 rounded mt-2 mb-4 bg-gray-700 text-white"
                         />
                     </div>
 
                     <div>
-                        <label className="font-bold">Password</label>
+                        <label htmlFor="password" className="font-bold w-full">Password</label>
                         <input
                             required
+                            id="password"
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            className="border ml-3 p-1 rounded mb-4"
+                            className="w-full border p-2 rounded mt-2 mb-4 bg-gray-700 text-white"
                         />
                     </div>
 
